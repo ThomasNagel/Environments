@@ -5,5 +5,5 @@ jobs:
   test-stuff:
     runs-on: ubuntu-latest
     steps:
-      - name: echo test
-        run: echo "test"
+      - name: echo new test
+        run: echo "new test"
