@@ -1,13 +1,19 @@
 # RULES
 
+### Environments
+No protection rules\
+Allow administrators to bypass configured protection rules\
+Deployment branches and tags:
+- main
+
+Environment secrets:
+- access token to website repo
+
 ### Branch protection
 Setup branch protection for all branches with the following settings:
-- Branch name pattern: *
+- Branch name pattern: main
 - Require a pull reqeust before merging
     - Require review from **Code Owners**
-- Require status checks to pass before merging
-    - PR-security-checks
-- **Lock branch**
 - Allow force pushes
     - Specify who can force push -> Admin
 - Allow deletions
