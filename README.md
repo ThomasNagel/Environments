@@ -9,9 +9,9 @@ The core idea is to use the main branch as a gateway to the *DeployDatabase* env
 Only select repositories -> select the website repo.\
 Permissions:
 - **Read and write**: Contents, Pull requests
-- **No access**: Codespaces secrets, Dependabot secrets, Environments, Secret scanning alerts, Secrets, Variables, Worklfows
+- **Read-only**: metadata
 
-All other repository permissions are **Read-only**.
+All other repository permissions are **No access**.
 All account permissions are **No access**
 
 ### Environments
