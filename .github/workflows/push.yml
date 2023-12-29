@@ -28,7 +28,7 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies for python script
-        run: pip3 install -r yaml-files/requirements.txt
+        run: pip3 install -r yaml-files/.src/requirements.txt
 
       - name: create Database
         run: python3 yaml-files/.src/createDB.py yaml-files/
