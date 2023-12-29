@@ -1,0 +1,10 @@
+name: Push test
+run-name: ${{ github.actor }} is testing out the push test
+on: push
+jobs:
+  test-stuff:
+    runs-on: ubuntu-latest
+    environment: DeployDatabase
+    steps:
+      - name: echo new test
+        run: echo "test"
