@@ -4,6 +4,7 @@ on: push
 jobs:
   test-stuff:
     runs-on: ubuntu-latest
+    environment: DeployDatabase
     steps:
       - name: echo new test
         run: echo "new test"
