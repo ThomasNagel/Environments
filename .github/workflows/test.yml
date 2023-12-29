@@ -12,4 +12,4 @@ jobs:
     environment: DeployDatabase
     steps:
       - name: echo new test
-        run: echo "test"
+        run: echo "test 2"
