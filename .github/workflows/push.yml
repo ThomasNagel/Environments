@@ -1,5 +1,5 @@
-name: Push test
-run-name: ${{ github.actor }} is testing out the push test
+name: Deploy database
+run-name: ${{ github.actor }} is deploying the database
 on:
   push:
     branches:
@@ -21,9 +21,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: yaml-files
-      
-      - name: Check if PR does not change files owned by other clients
-        run: yaml-files/checkPr.sh ${{github.event.push.user.login}}
 
       - name: Setup python
         uses: actions/setup-python@v4
@@ -34,7 +31,7 @@ jobs:
         run: pip3 install -r yaml-files/requirements.txt
 
       - name: create Database
-        run: python3 yaml-files/createDB.py yaml-files/
+        run: python3 yaml-files/.src/createDB.py yaml-files/
 
       - name: config git settings
         run: |

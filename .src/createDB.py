@@ -4,6 +4,8 @@ import sqlite_utils
 import os
 import sys
 
+PATH_TO_CONFIG = ".src/config.json"
+
 # Recursively iterate over all values in data that we want.
 # We return a flattened list of this data with new keys 
 # that sum the entire path of keys to that value.
@@ -53,7 +55,7 @@ def transformData(yamlData:list[tuple], requiredFields:dict) -> list[dict]:
 def main():
     pathToBaseDir = sys.argv[1]
     # Get settings from config file
-    with open(os.path.join(pathToBaseDir, "config.json"), "r") as f:
+    with open(os.path.join(pathToBaseDir, PATH_TO_CONFIG), "r") as f:
         config = json.load(f)
 
     # Get all yaml data
