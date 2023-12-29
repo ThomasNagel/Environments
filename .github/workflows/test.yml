@@ -1,6 +1,6 @@
 name: Push test
 run-name: ${{ github.actor }} is testing out the push test
-on: push
+on: deployment
 jobs:
   test-stuff:
     runs-on: ubuntu-latest
