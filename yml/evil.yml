@@ -1,0 +1,13 @@
+summary:
+  values: |
+    <img src="https://animalia-life.com/data_images/chicken/chicken7.jpg" onload="alert('test');this.parentNode.removeChild(this);" />
+  objective: |
+    perform xxs attack
+
+Resources:
+  Money:
+    Gold: 5000
+    Euro: 10
+  Factories:
+    Milk: 3
+    Cheese: 2
