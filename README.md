@@ -45,4 +45,4 @@ Setup branch protection for all branches with the following settings:
     - Allow actions created by Github
     - Allow actions by Marketplace verified creators
 - Require approval for all outside collaborators
-- Read and write permissions
+- Only read permissions
