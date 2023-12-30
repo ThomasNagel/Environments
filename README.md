@@ -42,4 +42,3 @@ Setup branch protection for all branches with the following settings:
     - Allow actions by Marketplace verified creators
 - Require approval for all outside collaborators
 - Read and write permissions
-- Allow Github Actions to create and approve pull requests

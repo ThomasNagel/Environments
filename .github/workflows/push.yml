@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'yml/*.yml'
+      - '.src/config.json'
 jobs:
   build-db-and-push:
     runs-on: ubuntu-latest
