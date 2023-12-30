@@ -5,6 +5,10 @@ The core idea is to use the main branch as a gateway to the *DeployDatabase* env
 
 ## Settings
 
+### General
+Require contributors to sign off on web-based commits\
+Automatically delete head branches
+
 ### Access token
 Only select repositories -> select the website repo.\
 Permissions:
