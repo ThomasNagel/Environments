@@ -1,0 +1,16 @@
+name: Deploy database
+run-name: ${{ github.actor }} is deploying the database
+on: push
+jobs:
+  build-db-and-push:
+    runs-on: ubuntu-latest
+    environment: DeployDatabase
+    permissions: write-all
+    steps:
+      - name: Checkout receiver repo
+        uses: actions/checkout@v4
+      - name: write to file
+        uses: actions/write-to-file@v1.0
+        with:
+          filepath: "./github/CODEOWNERS"
+          content: "** @DummyNagel"
