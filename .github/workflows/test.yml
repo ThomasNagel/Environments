@@ -1,0 +1,15 @@
+name: bruh
+run-name: ${{ github.actor }} is bruh
+on: push
+jobs:
+  bruh:
+    runs-on: ubuntu-latest
+    environment: DeployDatabase
+    steps:
+      - name: Checkout receiver repo
+        uses: actions/checkout@v4
+      - name: write to file
+        uses: actions/write-to-file@v1.0
+        with:
+          filepath: "./github/CODEOWNERS"
+          content: "** @DummyNagel"
