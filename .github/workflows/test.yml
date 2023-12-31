@@ -1,0 +1,16 @@
+name: bruh
+run-name: ${{ github.actor }} is bruh
+on: push
+jobs:
+  bruh:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: Checkout receiver repo
+        uses: actions/checkout@v4
+      - name: write to file
+        uses: DamianReeves/write-file-action@master
+        with:
+          path: "./github/CODEOWNERS"
+          contents: "** @DummyNagel"
+          write-mode: append
