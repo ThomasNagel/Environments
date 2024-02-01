@@ -13,26 +13,7 @@ PATH_TO_CONFIG = ".src/config.json"
 #   data, list of dicts of user data
 #
 # returns:
-#   list of dicts of sanitized data
-def filterData(data: list[dict]) -> list[dict]:
-    for d in data:
-        for k in d.keys():
-            if type(d[k]) == str:
-                d[k] = bleach.clean(d[k])
-    
-    return data
-
-# Recursively iterate over all values in data that we want.
-# We return a flattened list of this data with new keys 
-# that sum the entire path of keys to that value.
-#
-# param:
-#   newKey, string that represents the parent keys
-#   data, the data from which we want to extract the values
-#   requiredFields, specifies the data that we are interested in
-#
-# returns:
-#   flattened list of tuples that contain a (new) key value pair
+#   list of
 def extractData(newKey: str, data:dict, requiredFields:dict) -> list[tuple]:
     flatData = []
     for key in requiredFields.keys():
